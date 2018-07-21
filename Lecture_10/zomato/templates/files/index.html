@@ -1,0 +1,21 @@
+{% extends 'files/base.html' %}
+
+{% block body %}
+
+<h1 align=center> Welcome to our zomato app </h1>
+<h2>
+Navigation
+</h2>
+<ul>
+        <li> <a href="{% url 'restaurants' %}?filter=a2z&reverse=0"> Restaurants </a> </li>
+    <li>
+        <a href="{% url 'addRestaurants' %}" 
+        onclick="window.open('addRestaurants', 
+        'newwindow', 
+        'width=300,height=250'); 
+         return false;"
+        >add Restaurant</a>
+    </li>
+</ul>
+
+{% endblock %}
